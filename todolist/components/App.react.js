@@ -10,7 +10,6 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                {console.log('props', this.props.tasks)}
                 <Header/>
                 <MainContainer/>
                 <Todos tasks={this.props.tasks}/>

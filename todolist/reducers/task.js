@@ -12,7 +12,6 @@ const task = (action) => {
     }
 }
 
-//Это нормально { 0:[].... }
 const tasks = (state = { 0:[], 1:[], 2:[], 3:[] }, action) => {
     switch (action.type) {
         case 'ADD_TODO':
