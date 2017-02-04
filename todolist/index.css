@@ -1,0 +1,116 @@
+body {
+    overflow-x: hidden;
+}
+
+.header-class {
+    color: #000000;
+    text-align: center;
+}
+
+.table-container-class {}
+
+.component {
+    width: 200px;
+    height: 200px;
+    background: #FFFFB2;
+    position: relative;
+    border: 1px solid #000000;
+    margin: 10px;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid red;
+    border-bottom: 10px solid transparent;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid blue;
+    border-bottom: 10px solid transparent;
+}
+
+.container {
+    display: inline-block;
+    width: 100%;
+}
+
+.container>ul {
+    width: 25%;
+    float: left;
+    position: relative;
+    left: 5%;
+    display: inline-block;
+}
+
+.todo-column .component {
+    background: #ffffff;
+}
+
+.done-column .component {
+  background: #ccffcc;
+}
+
+.inprogress-column .component {
+    background: #99ccff;
+}
+
+.testing-column .component {
+    background: #FFFFB2;
+}
+
+.task-hour {
+  position: absolute;
+  bottom: 20px;
+  left: 35%;
+}
+
+.task-name {
+  font-weight: bold;
+}
+
+.task-description {
+  font-style: italic;
+}
+
+.container>ul li {
+    text-align: center;
+}
+
+.form-list {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 50px 0;
+    position: relative;
+    left: 35%;
+    border: 2px solid #000000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header th {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+}
