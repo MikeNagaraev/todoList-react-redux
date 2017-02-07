@@ -7,10 +7,8 @@ import statuses from '../statuses'
 export default class Todos extends React.Component {
     findByStatus(status) {
         let tasksByStatus = [];
-        console.log('component todos props', this.props.tasks)
         this.props.tasks.get('tasksList').forEach(task => {
-            console.log('task',task)
-            if (task.status === status) {
+            if (task.get('status') === status) {
                 tasksByStatus.push(task)
             }
         })
@@ -21,23 +19,22 @@ export default class Todos extends React.Component {
         return (
             <div className="table-container">
                 <ul className="todo-column">
-                    {console.log('component todos1 props', this.props.tasks)}
-                    {this.findByStatus(statuses.TODO).map(task => <Todo key={task.id} todo={task}>
+                    {this.findByStatus(statuses[0]).map(task => <Todo key={task.get('id')} todo={task}>
                         {task}
                     </Todo>)}
                 </ul>
                 <ul className="inprogress-column">
-                    {this.findByStatus(statuses.IN_PROGRES).map(task => <Todo key={task.id} todo={task}>
+                    {this.findByStatus(statuses[1]).map(task => <Todo key={task.get('id')} todo={task}>
                         {task}
                     </Todo>)}
                 </ul>
                 <ul className="testing-column">
-                    {this.findByStatus(statuses.TESTING).map(task => <Todo key={task.id} todo={task}>
+                    {this.findByStatus(statuses[2]).map(task => <Todo key={task.get('id')} todo={task}>
                         {task}
                     </Todo>)}
                 </ul>
                 <ul className="done-column">
-                    {this.findByStatus(statuses.DONE).map(task => <Todo key={task.id} todo={task}>
+                    {this.findByStatus(statuses[3]).map(task => <Todo key={task.get('id')} todo={task}>
                         {task}
                     </Todo>)}
                 </ul>

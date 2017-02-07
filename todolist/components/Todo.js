@@ -18,13 +18,18 @@ class Todo extends React.Component {
                         </p>
                     </div>
                     <div className="navigation">
-                        <div className="arrow arrow-left" onClick= {() => this.props.left(todo)}></div>
-                        <div className="arrow arrow-right" onClick= {() => this.props.right(todo)}></div>
+                        <div className="arrow arrow-left" onClick= {() => this.props.left(this.props.todo)}></div>
+                        <div className="arrow arrow-right" onClick= {() => this.props.right(this.props.todo)}></div>
                     </div>
                 </div>
             </li>
         )
     }
+}
+
+const mapStateToProps = state => {
+  console.log('state', state)
+  return { state: state }
 }
 
 const mapActionsToProps = dispatch => {
@@ -38,4 +43,4 @@ const mapActionsToProps = dispatch => {
   }
 }
 
-export default connect(mapActionsToProps)(Todo);
+export default connect(mapStateToProps,mapActionsToProps)(Todo);

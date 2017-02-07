@@ -20,7 +20,6 @@ export default class ClassName extends React.Component {
                     </tr>
                 </thead>
             </Table>
-            {console.log('component main props', this.props)}
             <Todos tasks={this.props.tasks}/>
           </div>
         )
