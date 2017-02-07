@@ -1,20 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {addTodo, moveLeft, moveRight} from '../actions'
+import './css/todo.css'
 
 class Todo extends React.Component {
     render() {
-        const todo = this.props.todo
         return (
             <li>
                 <div className="component">
                     <div className="task-content">
-                        <h3 className="task-name">{todo.name}</h3>
+                        <h3 className="task-name">{this.props.todo.get('name')}</h3>
                         <p className="task-description">
-                            {todo.desc}
+                            {this.props.todo.get('desc')}
                         </p>
                         <p className="task-hour">
-                            Hours : {todo.hours}
+                            Hours : {this.props.todo.get('hours')}
                         </p>
                     </div>
                     <div className="navigation">
@@ -25,10 +25,6 @@ class Todo extends React.Component {
             </li>
         )
     }
-}
-
-const mapStateToProps = state => {
-  return state;
 }
 
 const mapActionsToProps = dispatch => {
@@ -42,4 +38,4 @@ const mapActionsToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapActionsToProps)(Todo);
+export default connect(mapActionsToProps)(Todo);

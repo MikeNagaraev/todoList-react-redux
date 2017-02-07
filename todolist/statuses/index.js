@@ -1,0 +1,8 @@
+const STATUSES = {
+  TODO: 'TODO',
+  IN_PROGRES: 'IN_PROGRESS',
+  TESTING: 'TESTING',
+  DONE: 'DONE'
+}
+
+export default STATUSES

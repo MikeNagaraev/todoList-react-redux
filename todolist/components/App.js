@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './Header.react';
-import MainContainer from './MainContainer.react'
-import Footer from './Footer.react';
-import Todos from './Todos.react'
+import Header from './Header';
+import MainContainer from './MainContainer'
+import Footer from './Footer';
+import Todos from './Todos'
 import {connect} from 'react-redux'
 
 
@@ -11,8 +11,8 @@ class App extends React.Component {
         return (
             <div>
                 <Header/>
-                <MainContainer/>
-                <Todos tasks={this.props.tasks}/>
+                {console.log('component app props', this.props.tasks)}
+                <MainContainer tasks={this.props.tasks}/>
                 <Footer/>
             </div>
         )
@@ -20,6 +20,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
+  window.state = state;
+  console.log('state', state)
   return { tasks: state.tasks};
 }
 

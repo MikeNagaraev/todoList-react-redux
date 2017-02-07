@@ -1,0 +1,9 @@
+.form-list {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+
+.form-list .form-group {
+    text-align: left;
+}

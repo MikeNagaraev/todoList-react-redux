@@ -1,0 +1,55 @@
+.footer {
+    width: 100%;
+    height: 80px;
+    background: #dd4b39;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0px -2px 1px #000000;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.copyright {
+    float: left;
+}
+
+.footer-socials {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.footer-socials a {
+    color: #E0F2E2;
+    text-decoration: underline;
+}
+
+.footer-socials a:hover {
+    color: #BBD0BE;
+}
+
+.footer-socials a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-contact {
+    float: right;
+}
+
+.email {
+    font-style: italic;
+    color: #E0F2E2;
+    text-decoration: underline;
+}
+
+.email:hover {
+    color: #BBD0BE;
+}

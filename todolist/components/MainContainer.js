@@ -1,12 +1,15 @@
 import React from 'react'
 import '../index.css';
 import {Table} from 'react-bootstrap';
+import Todos from './Todos'
+import './css/maincontainer.css'
 
 export default class ClassName extends React.Component {
     render() {
         return (
-            <Table bordered>
-                <thead className="header">
+          <div className="main-container">
+            <Table>
+                <thead className="table-header">
                     <tr>
                         <th>TODO</th>
                         <th>
@@ -17,6 +20,9 @@ export default class ClassName extends React.Component {
                     </tr>
                 </thead>
             </Table>
+            {console.log('component main props', this.props)}
+            <Todos tasks={this.props.tasks}/>
+          </div>
         )
     }
 }

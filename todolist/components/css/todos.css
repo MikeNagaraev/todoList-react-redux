@@ -1,0 +1,37 @@
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table-container>ul {
+    border-left: 2px solid #000000;
+    flex-flow: column;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.table-container>ul li {}
+
+.todo-column .component {
+    background: #ffffff;
+}
+
+.done-column .component {
+    background: #ccffcc;
+}
+
+.inprogress-column .component {
+    background: #99ccff;
+}
+
+.testing-column .component {
+    background: #FFFFB2;
+}

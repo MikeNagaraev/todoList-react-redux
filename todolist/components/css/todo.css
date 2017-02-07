@@ -1,0 +1,52 @@
+.component {
+    width: 200px;
+    height: 200px;
+    background: #FFFFB2;
+    position: relative;
+    border: 1px solid #000000;
+    margin: 10px;
+    text-align: center;
+}
+
+.task-name {
+    font-weight: bold;
+}
+
+.task-description {
+    font-style: italic;
+}
+
+.task-hour {
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid red;
+    border-bottom: 10px solid transparent;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid blue;
+    border-bottom: 10px solid transparent;
+}
